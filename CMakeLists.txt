@@ -8,131 +8,131 @@ SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${OUTPUT_DIR})
 
-ADD_EXECUTABLE(asyncsrv asyncsrv.cpp)
+ADD_EXECUTABLE(asyncsrv src/asyncsrv.cpp)
 TARGET_LINK_LIBRARIES(asyncsrv zmq pthread)
 
-ADD_EXECUTABLE(hwclient hwclient.cpp)
+ADD_EXECUTABLE(hwclient src/hwclient.cpp)
 TARGET_LINK_LIBRARIES(hwclient zmq)
 
-ADD_EXECUTABLE(hwserver hwserver.cpp)
+ADD_EXECUTABLE(hwserver src/hwserver.cpp)
 TARGET_LINK_LIBRARIES(hwserver zmq)
 
-ADD_EXECUTABLE(identity identity.cpp zhelpers.hpp)
+ADD_EXECUTABLE(identity src/identity.cpp src/zhelpers.hpp)
 TARGET_LINK_LIBRARIES(identity zmq)
 
-ADD_EXECUTABLE(interrupt interrupt.cpp)
+ADD_EXECUTABLE(interrupt src/interrupt.cpp)
 TARGET_LINK_LIBRARIES(interrupt zmq)
 
-ADD_EXECUTABLE(lbbroker2 lbbroker2.cpp)
+ADD_EXECUTABLE(lbbroker2 src/lbbroker2.cpp)
 TARGET_LINK_LIBRARIES(lbbroker2 zmq czmq)
 
-ADD_EXECUTABLE(lbbroker lbbroker.cpp)
+ADD_EXECUTABLE(lbbroker src/lbbroker.cpp)
 TARGET_LINK_LIBRARIES(lbbroker zmq pthread)
 
-ADD_EXECUTABLE(lpclient lpclient.cpp)
+ADD_EXECUTABLE(lpclient src/lpclient.cpp)
 TARGET_LINK_LIBRARIES(lpclient zmq)
 
-ADD_EXECUTABLE(lpserver lpserver.cpp)
+ADD_EXECUTABLE(lpserver src/lpserver.cpp)
 TARGET_LINK_LIBRARIES(lpserver zmq)
 
-ADD_EXECUTABLE(mdbroker mdbroker.cpp)
+ADD_EXECUTABLE(mdbroker src/mdbroker.cpp)
 TARGET_LINK_LIBRARIES(mdbroker zmq)
 
-ADD_EXECUTABLE(mdclient2 mdclient2.cpp)
+ADD_EXECUTABLE(mdclient2 src/mdclient2.cpp)
 TARGET_LINK_LIBRARIES(mdclient2 zmq)
 
-ADD_EXECUTABLE(mdclient mdclient.cpp)
+ADD_EXECUTABLE(mdclient src/mdclient.cpp)
 TARGET_LINK_LIBRARIES(mdclient zmq)
 
-ADD_EXECUTABLE(mdworker mdworker.cpp)
+ADD_EXECUTABLE(mdworker src/mdworker.cpp)
 TARGET_LINK_LIBRARIES(mdworker zmq)
 
-ADD_EXECUTABLE(msgqueue msgqueue.cpp)
+ADD_EXECUTABLE(msgqueue src/msgqueue.cpp)
 TARGET_LINK_LIBRARIES(msgqueue zmq)
 
-ADD_EXECUTABLE(mspoller mspoller.cpp)
+ADD_EXECUTABLE(mspoller src/mspoller.cpp)
 TARGET_LINK_LIBRARIES(mspoller zmq)
 
-ADD_EXECUTABLE(msreader msreader.cpp)
+ADD_EXECUTABLE(msreader src/msreader.cpp)
 TARGET_LINK_LIBRARIES(msreader zmq)
 
-ADD_EXECUTABLE(mtrelay mtrelay.cpp)
+ADD_EXECUTABLE(mtrelay src/mtrelay.cpp)
 TARGET_LINK_LIBRARIES(mtrelay zmq pthread)
 
-ADD_EXECUTABLE(mtserver mtserver.cpp)
+ADD_EXECUTABLE(mtserver src/mtserver.cpp)
 TARGET_LINK_LIBRARIES(mtserver zmq pthread)
 
-ADD_EXECUTABLE(ppqueue ppqueue.cpp)
+ADD_EXECUTABLE(ppqueue src/ppqueue.cpp)
 TARGET_LINK_LIBRARIES(ppqueue zmq)
 
-ADD_EXECUTABLE(ppworker ppworker.cpp)
+ADD_EXECUTABLE(ppworker src/ppworker.cpp)
 TARGET_LINK_LIBRARIES(ppworker zmq)
 
-ADD_EXECUTABLE(psenvpub psenvpub.cpp)
+ADD_EXECUTABLE(psenvpub src/psenvpub.cpp)
 TARGET_LINK_LIBRARIES(psenvpub zmq)
 
-ADD_EXECUTABLE(psenvsub psenvsub.cpp)
+ADD_EXECUTABLE(psenvsub src/psenvsub.cpp)
 TARGET_LINK_LIBRARIES(psenvsub zmq)
 
-ADD_EXECUTABLE(rrbroker rrbroker.cpp)
+ADD_EXECUTABLE(rrbroker src/rrbroker.cpp)
 TARGET_LINK_LIBRARIES(rrbroker zmq)
 
-ADD_EXECUTABLE(rrclient rrclient.cpp)
+ADD_EXECUTABLE(rrclient src/rrclient.cpp)
 TARGET_LINK_LIBRARIES(rrclient zmq)
 
-ADD_EXECUTABLE(rrworker rrworker.cpp)
+ADD_EXECUTABLE(rrworker src/rrworker.cpp)
 TARGET_LINK_LIBRARIES(rrworker zmq)
 
-ADD_EXECUTABLE(rtdealer rtdealer.cpp)
+ADD_EXECUTABLE(rtdealer src/rtdealer.cpp)
 TARGET_LINK_LIBRARIES(rtdealer zmq pthread)
 
-ADD_EXECUTABLE(rtreq rtreq.cpp)
+ADD_EXECUTABLE(rtreq src/rtreq.cpp)
 TARGET_LINK_LIBRARIES(rtreq zmq pthread)
 
-ADD_EXECUTABLE(spqueue spqueue.cpp)
+ADD_EXECUTABLE(spqueue src/spqueue.cpp)
 TARGET_LINK_LIBRARIES(spqueue zmq)
 
-ADD_EXECUTABLE(spworker spworker.cpp)
+ADD_EXECUTABLE(spworker src/spworker.cpp)
 TARGET_LINK_LIBRARIES(spworker zmq)
 
-ADD_EXECUTABLE(suisnail suisnail.cpp)
+ADD_EXECUTABLE(suisnail src/suisnail.cpp)
 TARGET_LINK_LIBRARIES(suisnail zmq pthread)
 
-ADD_EXECUTABLE(syncpub syncpub.cpp)
+ADD_EXECUTABLE(syncpub src/syncpub.cpp)
 TARGET_LINK_LIBRARIES(syncpub zmq)
 
-ADD_EXECUTABLE(syncsub syncsub.cpp)
+ADD_EXECUTABLE(syncsub src/syncsub.cpp)
 TARGET_LINK_LIBRARIES(syncsub zmq)
 
-ADD_EXECUTABLE(tasksink2 tasksink2.cpp)
+ADD_EXECUTABLE(tasksink2 src/tasksink2.cpp)
 TARGET_LINK_LIBRARIES(tasksink2 zmq)
 
-ADD_EXECUTABLE(tasksink tasksink.cpp)
+ADD_EXECUTABLE(tasksink src/tasksink.cpp)
 TARGET_LINK_LIBRARIES(tasksink zmq)
 
-ADD_EXECUTABLE(taskvent taskvent.cpp)
+ADD_EXECUTABLE(taskvent src/taskvent.cpp)
 TARGET_LINK_LIBRARIES(taskvent zmq)
 
-ADD_EXECUTABLE(taskwork2 taskwork2.cpp)
+ADD_EXECUTABLE(taskwork2 src/taskwork2.cpp)
 TARGET_LINK_LIBRARIES(taskwork2 zmq)
 
-ADD_EXECUTABLE(taskwork taskwork.cpp)
+ADD_EXECUTABLE(taskwork src/taskwork.cpp)
 TARGET_LINK_LIBRARIES(taskwork zmq)
 
-ADD_EXECUTABLE(tripping tripping.cpp)
+ADD_EXECUTABLE(tripping src/tripping.cpp)
 TARGET_LINK_LIBRARIES(tripping zmq pthread)
 
-ADD_EXECUTABLE(udpping1 udpping1.cpp)
+ADD_EXECUTABLE(udpping1 src/udpping1.cpp)
 TARGET_LINK_LIBRARIES(udpping1 zmq pthread)
 
-ADD_EXECUTABLE(version version.cpp)
+ADD_EXECUTABLE(version src/version.cpp)
 TARGET_LINK_LIBRARIES(version zmq)
 
-ADD_EXECUTABLE(wuclient wuclient.cpp)
+ADD_EXECUTABLE(wuclient src/wuclient.cpp)
 TARGET_LINK_LIBRARIES(wuclient zmq)
 
-ADD_EXECUTABLE(wuproxy wuproxy.cpp)
+ADD_EXECUTABLE(wuproxy src/wuproxy.cpp)
 TARGET_LINK_LIBRARIES(wuproxy zmq)
 
-ADD_EXECUTABLE(wuserver wuserver.cpp)
+ADD_EXECUTABLE(wuserver src/wuserver.cpp)
 TARGET_LINK_LIBRARIES(wuserver zmq)
