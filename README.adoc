@@ -1,0 +1,26 @@
+= zguide-examples-cpp-with-cmake
+
+《ZMQ指南》C++例子
+
+== 安装依赖包
+
+.ArchLinux
+. yaourt -S czmq
+. sudo pacman -S zeromq
+
+== 编译
+. git clone https://github.com/fifilyu/zguide-examples-cpp-with-cmake.git
+. mkdir zecpp_build
+. cd zecpp_build
+. cmake ../zguide-examples-cpp-with-cmake
+. make
+
+== 使用
+
+进入build目录 `cd zecpp_build` ，然后执行 `bin` 目录下的程序即可。比如执行 `bin/version`，输出如下：
+
+[source,bash]
+----
+$ bin/version
+Current 0MQ version is 4.1.3
+----
